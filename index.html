@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Spotify</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="logo"><img src="./assets/logo.png" alt="">Spotify</li>
+            <li>Home</li>
+            <li>About</li>
+        </ul>
+    </nav>
+    <div class="block">
+        <div id="con" class="container">
+            
+            <div class="songlist">
+            <h1>Your Musical Treasures</h1>
+            <div class="songItemContainer"> 
+                    <div class="songItems">
+                        <img src="./assets/covers/1.jpg" alt="1" srcset="">
+                        <span class="songName">Still Rollin</span>
+                        <div class="songDuration"><span class="songListDisplay"><span class="timestamp">2:51<i id="0" class="fa-solid fa-circle-play miniplayer"></i></span></span></div>
+                    </div>
+                    <div class="songItems">
+                        <img src="./assets/covers/1.jpg" alt="1" srcset="">
+                        <span class="songName">Still Rollin</span>
+                        <div class="songDuration"><span class="songListDisplay"><span class="timestamp">3:41<i id="1" class="fa-solid fa-circle-play miniplayer"></i></span></span></div>
+                    </div>
+                    <div class="songItems">
+                        <img src="./assets/covers/1.jpg" alt="1" srcset="">
+                        <span class="songName">Still Rollin</span>
+                        <div class="songDuration"></div><span class="songListDisplay"><span class="timestamp">3:23<i id="2" class="fa-solid fa-circle-play miniplayer"></i></span></span>
+                    </div>
+                    <div class="songItems">
+                        <img src="./assets/covers/1.jpg" alt="1" srcset="">
+                        <span class="songName">Still Rollin</span>
+                        <div class="songDuration"></div><span class="songListDisplay"><span class="timestamp">4:34<i id="3" class="fa-solid fa-circle-play miniplayer"></i></span></span>
+                    </div>
+                    <div class="songItems">
+                        <img src="./assets/covers/1.jpg" alt="1" srcset="">
+                        <span class="songName">Still Rollin</span>
+                        <div class="songDuration"></div><span class="songListDisplay"><span class="timestamp">2:56<i id="4" class="fa-solid fa-circle-play miniplayer"></i></span></span>
+                    </div>
+                    <div class="songItems">
+                        <img src="./assets/covers/1.jpg" alt="1" srcset="">
+                        <span class="songName">Still Rollin</span>
+                        <div class="songDuration"></div><span class="songListDisplay"><span class="timestamp">2:33<i id="5" class="fa-solid fa-circle-play miniplayer"></i></span></span>
+                    </div>                   
+            </div> 
+            </div>
+            <div class="songBanner"></div>
+        </div>
+    </div>
+    <div class="bottom">
+        <input type="range" id="progressBar" min="0" max="100" value="0">
+        <div class="icons">
+            <i class="fa-solid fa-backward fa-xl" id="previous"></i>
+            <i class="fa-solid fa-play fa-xl " id="masterPlay"></i>
+            <i class="fa-solid fa-forward fa-xl" id="next"></i>
+        </div>
+
+        <div class="songInfo">
+            <div class="coverImg"></div><img src="./assets/covers/1.jpg" id="coverPng" alt="" srcset=""><div id="coverName"></div>
+        </div>
+
+    </div>
+
+    <script src="https://kit.fontawesome.com/a1531e86c3.js" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+    
+</body>
+</html>

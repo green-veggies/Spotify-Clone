@@ -1,0 +1,218 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+
+:root{
+    --opacity : 0;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+    z-index: 99;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    font-family: 'Ubuntu', sans-serif;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height:65px;
+    background-color: rgb(33, 33, 33);
+    color:rgb(210, 210, 210);
+}
+nav ul li{
+    padding:0 12px;
+}
+
+.logo img{
+    width:44px;
+    padding: 0px 5px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+.container {
+    background-image: url(./assets/background.jpg);
+    background-size: cover;
+    min-height: 60vh;
+    position: relative;
+    margin:25px auto;
+    height: 250px;
+    color: rgb(210, 210, 210);
+    border-radius: 12px;
+    padding:34px;
+    display: flex;
+    width:70%;
+    font-family: 'Varela Round', sans-serif;
+  }
+  
+    .container:after{
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+      #0000ff, #00ff00,#ffff00, #ff0000);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: steam 20s linear infinite;
+    border-radius: 12px;
+    opacity: var(--opacity);
+    transition: opacity 1s ease-in;
+  }
+  
+  @keyframes steam {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .container:after {
+    filter: blur(50px);
+  }
+ 
+.bottom{
+    position:sticky;
+    height:110px;
+    background-color: rgb(33, 33, 33);
+    bottom:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:rgb(210, 210, 210);
+    flex-direction: column;
+}
+#progressBar{
+    width:80vw;
+    cursor: pointer; 
+    z-index: 990;  
+}
+.songItemContainer{
+    /* display: flex;
+    flex-direction: column; */
+    margin-top:50px;
+   
+}
+.icons{
+    padding: 20px;
+    z-index: 995;
+}
+.icons i{
+    padding: 0px 2.5px;
+    cursor: pointer;
+}
+.songItems{
+    height:50px;
+    display: flex;
+    background-color: rgb(210, 210, 210);
+    color:rgb(33, 33, 33);
+    margin:12px 0px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 34px;
+}
+.songItems img{
+    width:44px;
+    margin:0 5px;
+    border-radius: 50%;
+}
+.timestamp{
+    margin: 0 23px;
+}
+.timestamp i{
+    cursor: pointer;
+}
+.songInfo{
+    display:flex;
+    flex-direction: row;
+    position:absolute;
+    left: 2vw;
+    font-family: 'Varela Round', sans-serif;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+}
+.songInfo img{
+    width:79px;
+    border-radius:50%;
+    opacity : var(--opacity);
+    transition: opacity 1s ease-in;
+}
+.songInfo img{
+    animation: rotateImg 10s linear infinite;
+  }
+  @keyframes rotateImg{
+    from {
+     transform: rotate(0deg);
+    }
+   to {
+    transform: rotate(359deg);
+   }
+  }
+.coverName{
+    margin-top:10px;
+    margin-left:40px;
+}
+
+@media(max-width:600px){
+
+    body{
+        background-color: rgba(19, 247, 247, 0.365);
+    }
+    .container{
+        overflow: auto;
+    }
+    ::-webkit-scrollbar {
+        width: 20px;
+      }
+      
+      /* Track */
+      ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px rgba(33, 33, 33, 0); 
+        border-radius: 10px;
+      }
+       
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: rgba(33, 33, 33, 0); 
+      
+      }
+      
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgba(33, 33, 33, 0); 
+      }
+    .bottom {
+        position: sticky;
+        height: 110px;
+        background-color: rgb(33, 33, 33);
+        bottom: 0;
+        display: flex;
+        color: rgb(210, 210, 210);
+        align-items: flex-end;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-evenly;
+    }
+  }
